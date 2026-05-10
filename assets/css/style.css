@@ -291,7 +291,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .pricing-toggle .btn-outline-light:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--white);
+}
+
+.pricing-toggle .btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Global Button Contrast */
+.btn-primary:hover {
+    background-color: #4f46e5 !important; /* Slightly darker indigo */
+    border-color: #4f46e5 !important;
+    box-shadow: 0 8px 20px rgba(79, 70, 229, 0.4);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color) !important;
+    color: var(--white) !important;
 }
 
 .scale-up {
@@ -302,8 +319,20 @@ h1, h2, h3, h4, h5, h6 {
     transform: scale(1.05) !important;
 }
 
-.card-feature:hover .feature-img {
-    transform: scale(1.1);
+.feature-list-card {
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.feature-list-card:hover {
+    transform: translateX(10px);
+    background-color: var(--white) !important;
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.1) !important;
+}
+
+[data-bs-theme="dark"] .feature-list-card:hover {
+    background-color: var(--bg-secondary) !important;
 }
 
 .card-feature h4 {

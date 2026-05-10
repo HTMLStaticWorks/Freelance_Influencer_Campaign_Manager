@@ -34,7 +34,12 @@
                                 <label class="form-label small fw-bold">Password</label>
                                 <a href="#" class="small text-decoration-none">Forgot?</a>
                             </div>
-                            <input type="password" class="form-control" placeholder="••••••••">
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="password" placeholder="••••••••">
+                                <button class="btn btn-outline-secondary border-start-0" type="button" onclick="togglePassword('password', this)">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                            </div>
                         </div>
                         <div class="mb-3 form-check">
                             <input type="checkbox" class="form-check-input" id="remember">

@@ -80,3 +80,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // We can add a simple toggle or just ensure it's built-in.
     // For simplicity, we'll just ensure the layout handles dir="rtl" if added to <html>.
 });
+
+/**
+ * Toggle password visibility
+ * @param {string} inputId - ID of the password input field
+ * @param {HTMLElement} button - The button element that was clicked
+ */
+function togglePassword(inputId, button) {
+    const input = document.getElementById(inputId);
+    const icon = button.querySelector('i');
+    
+    if (input.type === 'password') {
+        input.type = 'text';
+        icon.classList.replace('bi-eye', 'bi-eye-slash');
+    } else {
+        input.type = 'password';
+        icon.classList.replace('bi-eye-slash', 'bi-eye');
+    }
+}
