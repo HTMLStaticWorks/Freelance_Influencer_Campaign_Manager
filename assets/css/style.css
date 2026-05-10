@@ -261,6 +261,47 @@ h1, h2, h3, h4, h5, h6 {
     transition: transform 0.5s ease;
 }
 
+/* Pricing Toggle */
+.pricing-toggle {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 6px;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.pricing-toggle .btn {
+    border-radius: 50px;
+    min-width: 160px;
+    border: none !important;
+    font-weight: 600;
+    padding: 12px 24px;
+    transition: all 0.3s ease;
+    margin: 0;
+}
+
+.pricing-toggle .btn-primary {
+    background-color: var(--primary-color) !important;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+}
+
+.pricing-toggle .btn-outline-light {
+    color: var(--white);
+}
+
+.pricing-toggle .btn-outline-light:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.scale-up {
+    transition: transform 0.3s ease;
+}
+
+.scale-up:hover {
+    transform: scale(1.05) !important;
+}
+
 .card-feature:hover .feature-img {
     transform: scale(1.1);
 }
