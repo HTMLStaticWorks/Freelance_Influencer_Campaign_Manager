@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Dashboard | InfluencerHub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+	<link rel="icon" type="image/png" href="assets/images/favicon.png">
+</head>
+<body class="bg-light">
+
+    <!-- Sidebar -->
+    <div class="sidebar shadow">
+        <div class="px-4 mb-5">
+            <a class="navbar-brand d-flex align-items-center text-white" href="index.html">
+                <i class="bi bi-megaphone-fill me-2 fs-3 text-primary"></i>
+                <span class="fs-4 fw-bold">InfluencerHub</span>
+            </a>
+        </div>
+        <nav>
+            <a href="#" class="sidebar-link active" data-section="analytics"><i class="bi bi-speedometer2 me-3"></i>Analytics</a>
+            <a href="#" class="sidebar-link" data-section="users"><i class="bi bi-people me-3"></i>Influencers</a>
+            <a href="#" class="sidebar-link" data-section="orders"><i class="bi bi-cart3 me-3"></i>Campaigns</a>
+            <a href="#" class="sidebar-link" data-section="messages"><i class="bi bi-chat-dots me-3"></i>Messages</a>
+            <hr class="text-secondary opacity-25 mx-3 my-4">
+            <a href="index.html" class="sidebar-link text-danger"><i class="bi bi-box-arrow-left me-3"></i>Logout</a>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="dashboard-content">
+        <!-- Top Nav -->
+        <div class="d-flex justify-content-between align-items-center mb-5">
+            <div>
+                <h3 class="fw-bold mb-0">Dashboard Overview</h3>
+                <p class="text-muted small">Welcome back, Nike Brand Manager!</p>
+            </div>
+            <div class="d-flex align-items-center">
+                <div class="rtl-toggle me-2" id="rtlToggle"><small class="fw-bold" style="font-size: 0.65rem;">RTL</small></div><div class="theme-toggle me-4" id="themeToggle">
+                    <i class="bi bi-moon-fill"></i>
+                </div>
+                <div class="dropdown">
+                    <div class="d-flex align-items-center dropdown-toggle cursor-pointer" data-bs-toggle="dropdown">
+                        <img src="https://i.pravatar.cc/40?u=brand" class="rounded-circle me-2" alt="Profile">
+                        <span class="fw-bold d-none d-md-block">Nike Marketing</span>
+                    </div>
+                    <ul class="dropdown-menu dropdown-menu-end border-0 shadow-sm mt-3">
+                        <li><a class="dropdown-item" href="#">Profile Settings</a></li>
+                        <li><a class="dropdown-item" href="#">Billing</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item text-danger" href="index.html">Sign Out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sections -->
+        <div id="analytics" class="dashboard-section">
+            <div class="row g-4 mb-5">
+                <div class="col-md-3">
+                    <div class="card p-4 border-0 shadow-sm">
+                        <small class="text-muted text-uppercase fw-bold">Total Reach</small>
+                        <h2 class="fw-bold mt-2">1.2M</h2>
+                        <span class="text-success small fw-bold"><i class="bi bi-arrow-up"></i> 12.5%</span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-4 border-0 shadow-sm">
+                        <small class="text-muted text-uppercase fw-bold">Active Campaigns</small>
+                        <h2 class="fw-bold mt-2">8</h2>
+                        <span class="text-primary small fw-bold">In progress</span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-4 border-0 shadow-sm">
+                        <small class="text-muted text-uppercase fw-bold">Engagements</small>
+                        <h2 class="fw-bold mt-2">85.4K</h2>
+                        <span class="text-success small fw-bold"><i class="bi bi-arrow-up"></i> 5.2%</span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-4 border-0 shadow-sm">
+                        <small class="text-muted text-uppercase fw-bold">Budget Spent</small>
+                        <h2 class="fw-bold mt-2">$12,400</h2>
+                        <span class="text-muted small">of $20,000</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow-sm p-4 h-100">
+                        <h5 class="fw-bold mb-4">Performance Over Time</h5>
+                        <div class="bg-light rounded-4 d-flex align-items-center justify-content-center" style="height: 300px;">
+                            <p class="text-muted"><i class="bi bi-graph-up fs-1 mb-2 d-block text-center"></i> Chart Placeholder</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card border-0 shadow-sm p-4 h-100">
+                        <h5 class="fw-bold mb-4">Demographics</h5>
+                        <div class="bg-light rounded-circle mx-auto mb-4 d-flex align-items-center justify-content-center" style="width: 200px; height: 200px;">
+                            <p class="text-muted small">Pie Chart</p>
+                        </div>
+                        <ul class="list-unstyled small">
+                            <li class="d-flex justify-content-between mb-2"><span>18-24 years</span> <strong>45%</strong></li>
+                            <li class="d-flex justify-content-between mb-2"><span>25-34 years</span> <strong>30%</strong></li>
+                            <li class="d-flex justify-content-between"><span>Other</span> <strong>25%</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Placeholder for other sections (hidden by default) -->
+        <div id="users" class="dashboard-section d-none">
+            <h4 class="fw-bold mb-4">Your Influencers</h4>
+            <div class="table-responsive bg-white rounded-4 shadow-sm p-3">
+                <table class="table table-hover align-middle">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Influencer</th>
+                            <th>Platform</th>
+                            <th>Followers</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <img src="https://i.pravatar.cc/35?u=1" class="rounded-circle me-2" alt="User">
+                                    <span>Sarah J.</span>
+                                </div>
+                            </td>
+                            <td><i class="bi bi-instagram text-danger me-2"></i>Instagram</td>
+                            <td>250K</td>
+                            <td><span class="badge bg-success-subtle text-success">Active</span></td>
+                            <td><button class="btn btn-sm btn-outline-primary">Message</button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <img src="https://i.pravatar.cc/35?u=2" class="rounded-circle me-2" alt="User">
+                                    <span>Mike D.</span>
+                                </div>
+                            </td>
+                            <td><i class="bi bi-tiktok text-dark me-2"></i>TikTok</td>
+                            <td>1.2M</td>
+                            <td><span class="badge bg-warning-subtle text-warning">Drafting</span></td>
+                            <td><button class="btn btn-sm btn-outline-primary">Review</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Sidebar Toggle -->
+    <button class="btn btn-primary d-md-none rounded-circle shadow" id="sidebarToggle" style="position: fixed; bottom: 20px; right: 20px; z-index: 2000;">
+        <i class="bi bi-list"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

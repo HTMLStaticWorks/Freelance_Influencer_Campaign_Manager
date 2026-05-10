@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfluencerHub | Freelance Influencer Campaign Manager</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+	<link rel="icon" type="image/png" href="assets/images/favicon.png">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i class="bi bi-megaphone-fill me-2"></i>
+                <span>InfluencerHub</span>
+            </a>
+            
+            <div class="d-flex align-items-center order-lg-3">
+                <div class="rtl-toggle me-2" id="rtlToggle"><small class="fw-bold" style="font-size: 0.65rem;">RTL</small></div><div class="theme-toggle me-3" id="themeToggle">
+                    <i class="bi bi-moon-fill"></i>
+                </div>
+                <a href="login.html" class="btn btn-outline-primary me-2 d-none d-sm-inline-block">Login</a>
+                <a href="register.html" class="btn btn-primary d-none d-sm-inline-block">Sign Up</a>
+                <button class="navbar-toggler ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home 1</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title"><i class="bi bi-megaphone-fill me-2"></i>InfluencerHub</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home 1</a></li>
+                <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <hr>
+                <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="register.html">Sign Up</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section py-5 text-center d-flex align-items-center justify-content-center" style="background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('assets/images/hero_bg_index_v2_1778400368645.png'); background-size: cover; background-position: center; min-height: 80vh;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-white">
+                        <h1 class="hero-title text-white" style="-webkit-text-fill-color: white;">Manage Your Influencer Campaigns Like a Pro</h1>
+                        <p class="lead mb-4 opacity-75">Connect with top-tier influencers, track real-time engagement, and scale your brand's reach with our all-in-one campaign management tool.</p>
+                        <div class="d-flex flex-column flex-sm-row justify-content-center gap-3 align-items-center">
+                            <a href="services.html" class="btn btn-primary btn-lg px-5 py-3 w-100 w-sm-auto">Get Started</a>
+                            <a href="about.html" class="btn btn-outline-light btn-lg px-5 py-3 w-100 w-sm-auto">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="row g-4 text-center">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card h-100 p-4 border-0 shadow-sm hover-stat-card">
+                            <h2 class="fw-bold text-primary mb-0">10K+</h2>
+                            <p class="text-muted small text-uppercase fw-bold mt-2">Influencers</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card h-100 p-4 border-0 shadow-sm hover-stat-card">
+                            <h2 class="fw-bold text-primary mb-0">500+</h2>
+                            <p class="text-muted small text-uppercase fw-bold mt-2">Active Brands</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card h-100 p-4 border-0 shadow-sm hover-stat-card">
+                            <h2 class="fw-bold text-primary mb-0">1M+</h2>
+                            <p class="text-muted small text-uppercase fw-bold mt-2">Engagements</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card h-100 p-4 border-0 shadow-sm hover-stat-card">
+                            <h2 class="fw-bold text-primary mb-0">95%</h2>
+                            <p class="text-muted small text-uppercase fw-bold mt-2">Client Satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="py-5">
+            <div class="container text-center mb-5">
+                <h2 class="fw-bold">Why Choose InfluencerHub?</h2>
+                <p class="text-muted">Everything you need to run successful marketing campaigns.</p>
+            </div>
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 overflow-hidden card-feature">
+                            <div class="feature-img-wrapper">
+                                <img src="assets/images/card_influencers.png" class="card-img-top feature-img" alt="Verified Influencers">
+                            </div>
+                            <div class="card-body p-4">
+                                <h4>Verified Influencers</h4>
+                                <p class="text-muted">Access a curated list of vetted creators across all major social platforms.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 overflow-hidden card-feature">
+                            <div class="feature-img-wrapper">
+                                <img src="assets/images/card_analytics.png" class="card-img-top feature-img" alt="Real-time Analytics">
+                            </div>
+                            <div class="card-body p-4">
+                                <h4>Real-time Analytics</h4>
+                                <p class="text-muted">Track campaign performance, reach, and conversion rates in real-time.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 overflow-hidden card-feature">
+                            <div class="feature-img-wrapper">
+                                <img src="assets/images/card_payments.png" class="card-img-top feature-img" alt="Secure Payments">
+                            </div>
+                            <div class="card-body p-4">
+                                <h4>Secure Payments</h4>
+                                <p class="text-muted">Automated payment processing for seamless influencer collaborations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Process" class="img-fluid rounded-4 shadow">
+                    </div>
+                    <div class="col-lg-6 ps-lg-5">
+                        <h2 class="fw-bold mb-4">How It Works</h2>
+                        <div class="d-flex mb-4">
+                            <div class="me-3"><span class="badge bg-primary rounded-circle p-3 fs-5">1</span></div>
+                            <div>
+                                <h5>Create Your Campaign</h5>
+                                <p class="text-muted">Define your goals, target audience, and budget in minutes.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-4">
+                            <div class="me-3"><span class="badge bg-primary rounded-circle p-3 fs-5">2</span></div>
+                            <div>
+                                <h5>Find Matches</h5>
+                                <p class="text-muted">Our AI matches you with the best influencers for your niche.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-4">
+                            <div class="me-3"><span class="badge bg-primary rounded-circle p-3 fs-5">3</span></div>
+                            <div>
+                                <h5>Scale Your Brand</h5>
+                                <p class="text-muted">Approve content and watch your brand engagement skyrocket.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="py-5">
+            <div class="container text-center mb-5">
+                <h2 class="fw-bold">What Our Clients Say</h2>
+            </div>
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card p-4 border-0 shadow-sm">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="https://i.pravatar.cc/150?u=1" alt="User" class="rounded-circle me-3" width="60">
+                                <div>
+                                    <h6 class="mb-0">Sarah Jenkins</h6>
+                                    <small class="text-muted">Marketing Director, TechFlow</small>
+                                </div>
+                            </div>
+                            <p class="fst-italic text-muted">"InfluencerHub completely transformed our social strategy. We saw a 200% increase in ROI within the first month."</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card p-4 border-0 shadow-sm">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="https://i.pravatar.cc/150?u=2" alt="User" class="rounded-circle me-3" width="60">
+                                <div>
+                                    <h6 class="mb-0">James Wilson</h6>
+                                    <small class="text-muted">Founder, UrbanEats</small>
+                                </div>
+                            </div>
+                            <p class="fst-italic text-muted">"The easiest platform I've ever used. Finding and paying influencers has never been so seamless."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-5 bg-primary text-white text-center">
+            <div class="container">
+                <h2 class="fw-bold mb-3">Ready to Launch Your Next Campaign?</h2>
+                <p class="lead mb-4">Join thousands of brands growing their business with InfluencerHub.</p>
+                <a href="register.html" class="btn btn-light btn-lg">Start Free Trial</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <a class="navbar-brand d-flex align-items-center mb-3 text-white" href="index.html">
+                        <i class="bi bi-megaphone-fill me-2"></i>
+                        <span>InfluencerHub</span>
+                    </a>
+                    <p class="text-secondary-emphasis">Empowering brands and influencers to build meaningful connections and drive impactful campaigns worldwide.</p>
+                    <div class="d-flex gap-3 fs-5 mt-3 footer-socials">
+                        <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-4">Company</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about.html">About Us</a></li>
+                        <li class="mb-2"><a href="services.html">Services</a></li>
+                        <li class="mb-2"><a href="pricing.html">Pricing</a></li>
+                        <li class="mb-2"><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-4">Support</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="contact.html">Contact</a></li>
+                        <li class="mb-2"><a href="#">Help Center</a></li>
+                        <li class="mb-2"><a href="#">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="#">Terms of Use</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="mb-4">Newsletter</h5>
+                    <p>Subscribe to get the latest marketing tips and trends.</p>
+                    <form class="mt-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Email address">
+                            <button class="btn btn-primary" type="button">Join</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="mt-5 mb-4 opacity-25">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">© 2026 InfluencerHub. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    <p class="mb-0">Made with <i class="bi bi-heart-fill text-danger"></i> for Influencers</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button type="button" class="btn btn-primary rounded-circle" id="backToTop">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
