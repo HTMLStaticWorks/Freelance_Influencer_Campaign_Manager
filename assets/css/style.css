@@ -3,7 +3,7 @@
     --secondary-color: #ec4899;
     --tertiary-color: #0ea5e9;
     --bg-light: #f8fafc;
-    --bg-dark: #0f172a;
+    --bg-dark: #172554; /* Rich Navy Blue */
     --text-light: #475569; /* Higher contrast for light mode secondary text */
     --text-dark: #1e293b;
     --white: #ffffff;
@@ -11,8 +11,8 @@
 }
 
 [data-bs-theme="dark"] {
-    --bg-light: #0f172a;
-    --bg-dark: #0b0f1a; /* Even darker background for more depth */
+    --bg-light: #1e293b;
+    --bg-dark: #172554; /* Consistent Rich Navy */
     --text-light: #94a3b8; /* Slate-400 */
     --text-dark: #f1f5f9; /* Slate-100 */
 }
@@ -45,6 +45,14 @@ body {
 
 .bg-light {
     background-color: var(--bg-light) !important;
+}
+
+.bg-dark {
+    background-color: var(--bg-dark) !important;
+}
+
+.bg-secondary {
+    background-color: #1e293b !important; /* Softer slate for secondary cards */
 }
 
 .bg-white {
