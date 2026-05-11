@@ -14,32 +14,36 @@
 
     <!-- Header -->
     <header class="navbar navbar-expand-lg sticky-top">
-        <div class="container">
+        <div class="container-fluid px-4">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
                 <i class="bi bi-megaphone-fill me-2"></i>
                 <span>InfluencerHub</span>
             </a>
             
             <div class="d-flex align-items-center order-lg-3">
-                <div class="rtl-toggle me-2" id="rtlToggle"><small class="fw-bold" style="font-size: 0.65rem;">RTL</small></div><div class="theme-toggle me-3" id="themeToggle">
-                    <i class="bi bi-moon-fill"></i>
+                <div class="d-none d-lg-flex align-items-center me-2">
+                    <div class="rtl-toggle me-2"><small class="fw-bold" style="font-size: 0.65rem;">RTL</small></div>
+                    <div class="theme-toggle me-3">
+                        <i class="bi bi-moon-fill"></i>
+                    </div>
                 </div>
-                <a href="login.html" class="btn btn-outline-primary me-2 d-none d-sm-inline-block">Login</a>
-                <a href="register.html" class="btn btn-primary d-none d-sm-inline-block">Sign Up</a>
-                <button class="navbar-toggler ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
-                    <span class="navbar-toggler-icon"></span>
+                <a href="login.html" class="btn btn-outline-primary me-2 d-none d-lg-inline-block">Login</a>
+                <a href="register.html" class="btn btn-primary d-none d-lg-inline-block">Sign Up</a>
+                <button class="navbar-toggler ms-2 border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                    <i class="bi bi-list fs-1 text-primary"></i>
                 </button>
             </div>
 
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home 1</a></li>
-                    <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home1</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home-2.html">Home2</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li><li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                     <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
                 </ul>
             </div>
         </div>
@@ -47,19 +51,31 @@
 
     <!-- Mobile Offcanvas Menu -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title"><i class="bi bi-megaphone-fill me-2"></i>InfluencerHub</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title fw-bold text-primary mb-0">
+                <i class="bi bi-megaphone-fill me-2"></i>InfluencerHub
+            </h5>
+            <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas"></button>
         </div>
         <div class="offcanvas-body">
+            <div class="d-lg-none d-flex align-items-center justify-content-between mb-4 p-3 bg-light rounded-4">
+                <span class="small fw-bold text-muted">Theme & Layout</span>
+                <div class="d-flex gap-2">
+                    <div class="rtl-toggle"><small class="fw-bold" style="font-size: 0.65rem;">RTL</small></div>
+                    <div class="theme-toggle">
+                        <i class="bi bi-moon-fill"></i>
+                    </div>
+                </div>
+            </div>
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home 1</a></li>
-                <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html">Home1</a></li>
+                <li class="nav-item"><a class="nav-link" href="home-2.html">Home2</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li><li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                 <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
                 <hr>
                 <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
                 <li class="nav-item"><a class="nav-link" href="register.html">Sign Up</a></li>
@@ -178,6 +194,41 @@
                             <li class="mb-3 d-flex align-items-center"><i class="bi bi-check-circle-fill text-primary me-2"></i> Multi-channel cross-referencing</li>
                         </ul>
                         <a href="services.html" class="btn btn-primary mt-3">Explore Network</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brand Safety Section -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
+                        <img src="assets/images/benefit_brand_safety.png" alt="Brand Safety" class="img-fluid rounded-4 shadow-lg">
+                    </div>
+                    <div class="col-lg-6 order-lg-1 pe-lg-5">
+                        <h2 class="fw-bold mb-4">Uncompromising Brand Safety</h2>
+                        <p class="text-muted mb-4">Protect your brand's reputation with our multi-layered vetting process. We analyze influencer history, content alignment, and audience quality to ensure every partnership is secure and authentic.</p>
+                        <div class="row g-4">
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-start">
+                                    <i class="bi bi-shield-check text-primary fs-2 me-3"></i>
+                                    <div>
+                                        <h6 class="fw-bold">Content Audit</h6>
+                                        <p class="small text-muted mb-0">AI-powered scan of past content for brand alignment.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-start">
+                                    <i class="bi bi-person-check text-primary fs-2 me-3"></i>
+                                    <div>
+                                        <h6 class="fw-bold">Identity Vetting</h6>
+                                        <p class="small text-muted mb-0">Rigorous verification of influencer credentials.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

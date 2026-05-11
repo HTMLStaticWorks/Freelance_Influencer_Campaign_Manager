@@ -13,53 +13,60 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Theme Toggle
-    const themeToggle = document.getElementById('themeToggle');
+    const themeToggles = document.querySelectorAll('.theme-toggle');
     const htmlElement = document.documentElement;
 
     const savedTheme = localStorage.getItem('theme') || 'light';
     htmlElement.setAttribute('data-bs-theme', savedTheme);
-    updateToggleIcon(savedTheme);
+    updateAllThemeIcons(savedTheme);
 
-    themeToggle.addEventListener('click', () => {
-        const currentTheme = htmlElement.getAttribute('data-bs-theme');
-        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-        htmlElement.setAttribute('data-bs-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        updateToggleIcon(newTheme);
+    themeToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-bs-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            htmlElement.setAttribute('data-bs-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateAllThemeIcons(newTheme);
+        });
     });
 
-    function updateToggleIcon(theme) {
-        const icon = themeToggle.querySelector('i');
-        if (theme === 'dark') {
-            icon.classList.replace('bi-moon-fill', 'bi-sun-fill');
-        } else {
-            icon.classList.replace('bi-sun-fill', 'bi-moon-fill');
-        }
+    function updateAllThemeIcons(theme) {
+        themeToggles.forEach(toggle => {
+            const icon = toggle.querySelector('i');
+            if (icon) {
+                if (theme === 'dark') {
+                    icon.classList.replace('bi-moon-fill', 'bi-sun-fill');
+                } else {
+                    icon.classList.replace('bi-sun-fill', 'bi-moon-fill');
+                }
+            }
+        });
     }
 
     // RTL Toggle
-    const rtlToggle = document.getElementById('rtlToggle');
+    const rtlToggles = document.querySelectorAll('.rtl-toggle');
     
     const savedDir = localStorage.getItem('dir') || 'ltr';
     htmlElement.setAttribute('dir', savedDir);
-    updateRtlIcon(savedDir);
+    updateAllRtlText(savedDir);
 
-    if (rtlToggle) {
-        rtlToggle.addEventListener('click', () => {
+    rtlToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
             const currentDir = htmlElement.getAttribute('dir');
             const newDir = currentDir === 'ltr' ? 'rtl' : 'ltr';
             htmlElement.setAttribute('dir', newDir);
             localStorage.setItem('dir', newDir);
-            updateRtlIcon(newDir);
+            updateAllRtlText(newDir);
         });
-    }
+    });
 
-    function updateRtlIcon(dir) {
-        if (!rtlToggle) return;
-        const text = rtlToggle.querySelector('small');
-        if (text) {
-            text.textContent = dir === 'ltr' ? 'RTL' : 'LTR';
-        }
+    function updateAllRtlText(dir) {
+        rtlToggles.forEach(toggle => {
+            const text = toggle.querySelector('small');
+            if (text) {
+                text.textContent = dir === 'ltr' ? 'RTL' : 'LTR';
+            }
+        });
     }
 
     // Back to Top Button

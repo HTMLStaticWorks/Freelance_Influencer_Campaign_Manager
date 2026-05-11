@@ -36,11 +36,17 @@ footer .text-secondary-emphasis {
     color: #94a3b8 !important; /* Brighter slate for footer readability */
 }
 
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--bg-light);
     color: var(--text-dark);
-    overflow-x: hidden;
 }
 
 .bg-light {
@@ -137,6 +143,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Navbar */
+.navbar .btn {
+    min-width: 110px; /* Ensures Login and Sign Up are the same width */
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .navbar {
     padding: 1rem 0;
     transition: var(--transition);
@@ -146,6 +161,19 @@ h1, h2, h3, h4, h5, h6 {
 
 [data-bs-theme="dark"] .navbar {
     background-color: rgba(15, 23, 42, 0.9);
+}
+
+.hero-section h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+@media (max-width: 1200px) {
+    .hero-section h1 {
+        font-size: 3rem;
+    }
 }
 
 .navbar-brand {
@@ -185,6 +213,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Hero Section */
+.section-padding {
+    padding: 100px 0;
+}
+
+@media (max-width: 1200px) {
+    .section-padding {
+        padding: 60px 0;
+    }
+}
+
 .hero-section {
     padding: 100px 0;
     background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%);
@@ -449,6 +487,66 @@ footer a:hover {
     background-color: var(--bg-dark);
     padding-top: 20px;
     transition: var(--transition);
+    z-index: 1100;
+}
+
+.navbar {
+    padding: 1rem 0;
+    background-color: var(--bg-dark);
+    transition: var(--transition);
+    z-index: 1030;
+}
+
+@media (min-width: 992px) and (max-width: 1280px) {
+    .navbar .container {
+        max-width: 100% !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+    
+    .navbar-brand {
+        font-size: 1rem !important;
+        flex: 0 0 150px !important;
+        margin-right: 0 !important;
+    }
+    
+    .navbar-collapse {
+        flex: 1 1 auto !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    .navbar-nav {
+        gap: 0 !important;
+    }
+
+    .navbar-nav .nav-link {
+        padding-left: 0.3rem !important;
+        padding-right: 0.3rem !important;
+        font-size: 0.78rem !important;
+        white-space: nowrap !important;
+    }
+
+    /* Right side actions group */
+    .navbar > .d-flex, 
+    .navbar > a.btn {
+        flex: 0 0 auto !important;
+    }
+    
+    /* Ensuring the right group doesn't push too hard */
+    .navbar .d-flex.align-items-center.gap-2.me-3 {
+        margin-right: 0.4rem !important;
+        gap: 0.2rem !important;
+    }
+
+    .navbar .btn {
+        min-width: 80px !important;
+        padding: 0.4rem 0.6rem !important;
+        font-size: 0.75rem !important;
+    }
 }
 
 .sidebar-link {
@@ -457,28 +555,224 @@ footer a:hover {
     color: #94a3b8;
     text-decoration: none;
     font-weight: 500;
+    border-left: 4px solid transparent;
 }
 
 .sidebar-link:hover, .sidebar-link.active {
     background-color: rgba(99, 102, 241, 0.1);
     color: var(--primary-color);
+    border-left: 4px solid var(--primary-color);
+}
+
+[dir="rtl"] .sidebar-link:hover, [dir="rtl"] .sidebar-link.active {
+    border-left: none;
     border-right: 4px solid var(--primary-color);
+}
+
+.sidebar-toggles {
+    display: none !important;
+}
+
+@media (max-width: 991px) {
+    .sidebar-toggles {
+        display: flex !important;
+    }
 }
 
 .dashboard-content {
     margin-left: 250px;
     padding: 30px;
+    transition: var(--transition);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     .sidebar {
-        width: 0;
-        overflow: hidden;
+        left: -250px;
+        width: 250px !important; /* Keep width fixed, move position instead */
+    }
+    .sidebar.show {
+        left: 0;
     }
     .dashboard-content {
         margin-left: 0;
     }
-    .hero-title {
-        font-size: 2.5rem;
+    
+    /* Overlay for mobile when sidebar is open */
+    .sidebar-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        z-index: 1090;
+        display: none;
+    }
+    .sidebar-overlay.active {
+        display: block;
+    }
+}
+
+/* Dashboard RTL Support */
+[dir="rtl"] .sidebar {
+    left: auto;
+    right: 0;
+}
+
+[dir="rtl"] .dashboard-content {
+    margin-left: 0;
+    margin-right: 250px;
+}
+
+@media (max-width: 991px) {
+    [dir="rtl"] .sidebar {
+        right: -250px;
+        left: auto;
+    }
+    [dir="rtl"] .sidebar.show {
+        right: 0;
+    }
+    [dir="rtl"] .dashboard-content {
+        margin-right: 0;
+    }
+}
+/* RTL Fixes */
+[dir="rtl"] .navbar-brand {
+    margin-left: 1rem;
+    margin-right: 0;
+}
+
+[dir="rtl"] .navbar-nav {
+    padding-right: 0;
+}
+
+[dir="rtl"] .ms-auto {
+    margin-right: auto !important;
+    margin-left: 0 !important;
+}
+
+[dir="rtl"] .me-auto {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+}
+
+[dir="rtl"] .navbar-collapse {
+    flex-grow: 1;
+}
+
+[dir="rtl"] .navbar-expand-lg .navbar-nav .nav-link.active::after {
+    left: 10px;
+    right: 10px;
+}
+
+/* Robust Navbar Centering (Works for LTR and RTL) */
+@media (min-width: 992px) {
+    .navbar > .container {
+        display: grid !important;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .navbar-brand {
+        grid-column: 1;
+        justify-self: start;
+        margin: 0 !important;
+    }
+
+    .navbar-collapse {
+        grid-column: 2;
+        justify-self: center;
+        display: flex !important;
+        flex-basis: auto;
+    }
+
+    .navbar .order-lg-3 {
+        grid-column: 3;
+        justify-self: end;
+        margin: 0 !important;
+    }
+}
+
+/* RTL Specific Overrides for Grid */
+@media (min-width: 992px) {
+    [dir="rtl"] .navbar-brand {
+        justify-self: end;
+    }
+    [dir="rtl"] .navbar .order-lg-3 {
+        justify-self: start;
+    }
+}
+
+[dir="rtl"] #backToTop {
+    right: auto;
+    left: 20px;
+}
+
+[dir="rtl"] .offcanvas-end {
+    right: auto;
+    left: 0;
+    transform: translateX(-100%);
+}
+
+[dir="rtl"] .offcanvas-end.show {
+    transform: none;
+}
+
+[dir="rtl"] .footer-socials {
+    justify-content: flex-start !important;
+}
+
+[dir="rtl"] .ms-3 {
+    margin-right: 1rem !important;
+    margin-left: 0 !important;
+}
+
+[dir="rtl"] .me-3 {
+    margin-left: 1rem !important;
+    margin-right: 0 !important;
+}
+
+[dir="rtl"] .me-2 {
+    margin-left: 0.5rem !important;
+    margin-right: 0 !important;
+}
+
+[dir="rtl"] .ms-2 {
+    margin-right: 0.5rem !important;
+    margin-left: 0 !important;
+}
+
+/* Dashboard RTL Mobile */
+@media (max-width: 991px) {
+    [dir="rtl"] .sidebar {
+        left: auto;
+        right: -250px;
+        transition: right 0.3s ease;
+    }
+    [dir="rtl"] .sidebar.show {
+        right: 0;
+        left: auto;
+    }
+}
+
+/* Dashboard Content Desktop RTL */
+@media (min-width: 992px) {
+    [dir="rtl"] .dashboard-content {
+        margin-left: 0;
+        margin-right: 250px;
+    }
+}
+
+/* Card Improvements for Mobile */
+@media (max-width: 576px) {
+    .dashboard-content .card {
+        padding: 1.5rem !important;
+    }
+    .dashboard-content h2 {
+        font-size: 1.75rem;
+    }
+    .dashboard-content h3 {
+        font-size: 1.5rem;
     }
 }
