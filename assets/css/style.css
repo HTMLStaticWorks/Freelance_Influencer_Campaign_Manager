@@ -103,13 +103,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Buttons */
-.btn-primary {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
+.btn-primary,
+.btn-outline-primary,
+.btn-light,
+.btn-outline-light {
     padding: 0.8rem 1.5rem;
     border-radius: 8px;
     font-weight: 600;
     transition: var(--transition);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
 }
 
 .btn-primary:hover {
@@ -121,9 +127,6 @@ h1, h2, h3, h4, h5, h6 {
 .btn-outline-primary {
     color: var(--primary-color);
     border-color: var(--primary-color);
-    padding: 0.8rem 1.5rem;
-    border-radius: 8px;
-    font-weight: 600;
 }
 
 .btn-outline-primary:hover {
